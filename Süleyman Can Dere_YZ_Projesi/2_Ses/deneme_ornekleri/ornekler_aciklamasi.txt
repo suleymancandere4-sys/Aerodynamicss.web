@@ -1,0 +1,45 @@
+SES ÖRNEKLERİ KLASÖRÜ
+=====================
+
+Bu klasör, Aerodinamik Web Sitesi'nin ses özelliklerinden alınmış deneme örneklerini içermektedir.
+
+ÖRNEK SES KAYITLARI:
+====================
+
+1. BERNOULLI PRENSİBİ ANLATIMI:
+   - Text-to-Speech ile formül açıklaması
+   - Türkçe doğal ses sentezi
+   - Matematiksel ifadelerin sesli okunması
+
+2. NAVIGATION REHBERİ:
+   - Website menü rehberliği
+   - Ses destekli sayfa yönlendirme
+   - Kullanıcı deneyimi optimizasyonu
+
+3. FORMÜL OKUYUCUSU:
+   - Matematiksel formüllerin sesli anlatımı
+   - Sembol ve işaretlerin Türkçe telaffuzu
+   - Eğitim amaçlı ses desteği
+
+4. İNTERAKTİF KOMUTLAR:
+   - Voice commands örnekleri
+   - Kullanıcı etkileşim sesleri
+   - Button click ve hover efektleri
+
+TEKNIK DETAYLAR:
+===============
+• Kayıt formatı: WAV/MP3
+• Sampling rate: 44.1 kHz
+• Bit depth: 16-bit
+• Kanal: Mono/Stereo
+• Sıkıştırma: Lossless/Lossy
+
+KULLANIM AMACI:
+==============
+• Proje ses özelliklerinin dokumentasyonu
+• Multimodal etkileşim örnekleri
+• Erişilebilirlik test kayıtları
+• Akademik değerlendirme materyali
+
+NOT: Bu örnekler, gerçek zamanlı Web Speech API çıktılarından 
+akademik dokümantasyon amaçlı oluşturulmuştur.

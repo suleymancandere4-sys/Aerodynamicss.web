@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aerodinamik - Hava akışı, uçak ve araç aerodinamiği hakkında kapsamlı rehber">
+    <meta name="keywords" content="aerodinamik, hava akışı, uçak, araba, aerodinamik kuvvetler, sürükleme, kaldırma">
+    <meta name="author" content="Aerodinamik Uzmanı">
+    
+    <!-- Open Graph meta tagları (sosyal medya paylaşımı için) -->
+    <meta property="og:title" content="Aerodinamik - Hava Akışı ve Hareket Bilimi">
+    <meta property="og:description" content="Uçak ve araç aerodinamiği hakkında kapsamlı bilgiler">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="./assets/images/og-image.jpg">
+    
+    <!-- Twitter Card meta tagları -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aerodinamik - Hava Akışı Bilimi">
+    <meta name="twitter:description" content="Uçak ve araç aerodinamiği hakkında kapsamlı bilgiler">
+    <meta name="twitter:image" content="./assets/images/aerodynamics-og.jpg">
+    
+    <title>Aerodinamik - Hava Akışı ve Hareket Bilimi</title>
+    
+    <!-- CSS dosyaları -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/components.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    
+    <!-- Font Awesome (ikonlar için) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Theme Selector -->
+    <div class="theme-selector" id="theme-selector">
+        <button class="theme-toggle" id="theme-toggle" title="Tema Değiştir">
+            <i class="fas fa-palette"></i>
+        </button>
+        <div class="theme-options" id="theme-options">
+            <button class="theme-btn light-theme active" data-theme="light" title="Açık Tema">
+                <i class="fas fa-sun"></i>
+                <span>Açık</span>
+            </button>
+            <button class="theme-btn dark-theme" data-theme="dark" title="Koyu Tema">
+                <i class="fas fa-moon"></i>
+                <span>Koyu</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <h1><i class="fas fa-paper-plane"></i> AeroDinamik</h1>
+                </div>
+                <div class="navbar-menu" id="navbar-menu">
+                    <ul class="navbar-nav">
+                        <li><a href="#home" class="nav-link">Ana Sayfa</a></li>
+                        <li><a href="#about" class="nav-link">Aerodinamik Nedir?</a></li>
+                        <li><a href="#gallery" class="nav-link">Aerodinamik Galeri</a></li>
+                        <li><a href="#media" class="nav-link">Aero Videolar ve Sesler</a></li>
+                        <li><a href="#contact" class="nav-link">Geri Bildirim</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-toggle" id="navbar-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Claude Sonnet Badge -->
+        <div class="claude-badge">
+            <div class="claude-logo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" fill="white"/>
+                    <path d="M8 12l2 2 4-4" stroke="#3498db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="claude-text">
+                <span class="made-by">Made by</span>
+                <strong class="claude-name">Claude Sonnet</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content main-wrapper">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">Aerodinamik Dünyasına Hoş Geldiniz</h2>
+                    <p class="hero-description">Hava akışı, uçak ve araç aerodinamiği hakkında kapsamlı bilgiler. Rüzgarın gücünü ve hareketin bilimini keşfedin. Modern aerodinamik 18. yüzyıla dayanmaktadır, fakat aerodinamik kuvvetler insanlar tarafından tekneler ve rüzgâr değirmenleri için binlerce yıl konuşulmuştur ve bunun hakkındaki görüntüler ve hikâyeler tarihe kaydedilmiştir. Buna örnek, antik Yunan efsanelerinden İkarus ve Daidalos 'tadır.
+</p>
+                    <button class="cta-button" onclick="scrollToSection('gallery')">🛩️ Keşfet</button>
+                </div>
+                <div class="hero-media">
+                    <div class="hero-visual-container">
+                        <div class="hero-main-image">
+                            <img src="https://www.yeniumitehliyet.com/wp-content/uploads/2016/11/aerodinamik-nedir.jpg" 
+                                 alt="Aerodinamik Nedir - Hava Akış Analizi" 
+                                 class="aero-main-image">
+                            <div class="image-overlay">
+                                <div class="overlay-text">
+                                    <h4>🌬️ Hava Akış Analizi</h4>
+                                    <p>Gerçek CFD simülasyonu</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-secondary-media">
+                            <div class="aero-info-card">
+                                <div class="info-header">
+                                    <i class="fas fa-wind"></i>
+                                    <h5>CFD Analizi</h5>
+                                </div>
+                                <div class="info-stats">
+                                    <div class="stat">
+                                        <span class="value">Mach 0.8</span>
+                                        <span class="label">Hız</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="value">15° AoA</span>
+                                        <span class="label">Hücum Açısı</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <video class="hero-video-small" autoplay muted loop>
+                                <source src="./assets/videos/aerodynamic-flow.mp4" type="video/mp4">
+                                <source src="./assets/videos/wind-tunnel.mp4" type="video/mp4">
+                                Aerodinamik simülasyon videosu yüklenemiyor.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="flow-animation">
+                        <div class="airflow-line"></div>
+                        <div class="airflow-line"></div>
+                        <div class="airflow-line"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Aerodynamics Section - EN ÜSTE -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">🔬 Aerodinamik Nedir?</h2>
+                <div class="about-content">
+                    <div class="about-intro">
+                        <p class="lead-text">Aerodinamik, havanın ve diğer gazların hareket halindeki cisimlerle etkileşimini inceleyen bilim dalıdır. Akışkanlar mekaniğinin bir alt dalı olan bu bilim, uçak, araba, gemi, roket ve hatta insan vücudunun hareketini optimize etmek için kullanılır. Aerodinamik, hareket eden katı kütlelerin havayla etkileşimlerini inceleyen bilim dalıdır. Havanın nesnelerin etrafında hareket etme şekli olarak tanımlanabilir ve uçakların havalanması gibi olayları açıklamak için aerodinamik kurallar kullanılır. Aerodinamik, ayrıca hareket eden havanın etkilerini ve bu havanın katı cisimler üzerindeki etkilerini de kapsar.
+
+                        </p>
+                        <div class="definition-box">
+                            <h4>📚 Etimoloji</h4>
+                            <p><strong>"Aero"</strong> (Yunanca: ἀήρ = hava) + <strong>"Dynamik"</strong> (Yunanca: δύναμις = güç, kuvvet)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="history-section">
+                        <h3>📜 Aerodinamiğin Tarihçesi</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-year">1500</div>
+                                <div class="timeline-portrait">
+                                    <img src="https://www.singulart.com/blog/wp-content/uploads/2023/10/Leonardo-Da-Vinci-1140x1140.webp" alt="Leonardo da Vinci Portresi" class="scientist-portrait" data-scientist="leonardo">
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Leonardo da Vinci</h4>
+                                    <p>İlk uçak tasarımları ve hava akışı gözlemleri. "Codex on the Flight of Birds" eseri.</p>
+                                    <div class="scientist-details">
+                                        <span class="contribution">🎨 Sanatçı, Mühendis, Mucit</span>
+                                        <span class="achievement">✈️ İlk heliş uçak tasları</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">1738</div>
+                                <div class="timeline-portrait">
+                                    <img src="https://th.bing.com/th/id/R.e2688b8257c822d7bcf5291fea88c665?rik=%2bWXR%2fR%2fGTtulPg&pid=ImgRaw&r=0" alt="Daniel Bernoulli Portresi" class="scientist-portrait" data-scientist="bernoulli">
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Daniel Bernoulli</h4>
+                                    <p>Bernoulli Prensibi'ni formüle etti. Akışkan hızı ile basınç arasındaki ilişki.</p>
+                                    <div class="scientist-details">
+                                        <span class="contribution">🔬 Matematikçi, Fizikçi</span>
+                                        <span class="achievement">🌊 Akışkanlar mekaniği kuramları</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">1799</div>
+                                <div class="timeline-portrait">
+                                    <img src="https://th.bing.com/th/id/OIP.XQ3geAr3afPye8VkSB-vOgHaLU?w=115&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="George Cayley Portresi" class="scientist-portrait" data-scientist="cayley">
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>George Cayley</h4>
+                                    <p>"Modern havacılığın babası". Dört temel aerodinamik kuvveti tanımladı.</p>
+                                    <div class="scientist-details">
+                                        <span class="contribution">🎆 İngiliz Havacılık Öncüsü</span>
+                                        <span class="achievement">✈️ İlk planör uçuşları</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">1903</div>
+                                <div class="timeline-portrait">
+                                    <img src="https://4.bp.blogspot.com/-Q71S-Jrp6Lg/WUi27vLbPwI/AAAAAAAAM9k/R1ulU4ZYcbEmopjWXbPYv7-O7H4UDyrHQCLcBGAs/s1600/First_flight_wright_brothers_2.jpg" alt="Wright Kardeşler Portresi" class="scientist-portrait" data-scientist="wright">
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Wright Kardeşler</h4>
+                                    <p>İlk motorlu uçak uçuşu. Rüzgar tüneli deneyleri ile kanat profili optimizasyonu.</p>
+                                    <div class="scientist-details">
+                                        <span class="contribution">✈️ Havacılık Öncüleri</span>
+                                        <span class="achievement">🎆 17 Aralık 1903 - Kitty Hawk</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">1904</div>
+                                <div class="timeline-portrait">
+                                    <img src="https://th.bing.com/th/id/ODL.a13f2c43a64f7e1c132668af225e53b9?w=228&h=200&c=8&rs=1&qlt=99&o=6&dpr=1.3&pid=AlgoBlockDebug" alt="Ludwig Prandtl Portresi" class="scientist-portrait" data-scientist="prandtl">
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Ludwig Prandtl</h4>
+                                    <p>"Modern aerodinamiğin babası". Sınır tabaka teorisi ve kaldırma çizgisi teorisi.</p>
+                                    <div class="scientist-details">
+                                        <span class="contribution">🔬 Alman Akışkanlar Uzmanı</span>
+                                        <span class="achievement">🏆 Göttingen Okulu Kurucusu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="formulas-section">
+                        <h3>🧮 Temel Aerodinamik Formülleri</h3>
+                        <div class="formulas-grid">
+                            <div class="formula-card">
+                                <h4>Bernoulli Denklemi</h4>
+                                <div class="formula">
+                                    <strong>P + ½ρv² + ρgh = sabit</strong>
+                                </div>
+                                <ul class="formula-params">
+                                    <li><strong>P:</strong> Basınç (Pascal)</li>
+                                    <li><strong>ρ:</strong> Akışkan yoğunluğu (kg/m³)</li>
+                                    <li><strong>v:</strong> Hız (m/s)</li>
+                                    <li><strong>g:</strong> Yerçekimi ivmesi (9.81 m/s²)</li>
+                                    <li><strong>h:</strong> Yükseklik (m)</li>
+                                </ul>
+                                <div class="formula-usage">
+                                    <h5>🎯 Kullanım Alanları:</h5>
+                                    <ul class="usage-list">
+                                        <li><strong>Uçak Kanat Tasarımı:</strong> Kaldırma kuvveti hesaplaması</li>
+                                        <li><strong>Rüzgar Tüneli:</strong> Hız-basınç ilişkisi analizi</li>
+                                        <li><strong>Pitot Tübü:</strong> Uçak hız ölçümü</li>
+                                        <li><strong>Ventilatör Tasarımı:</strong> Hava akış hızı hesabı</li>
+                                    </ul>
+                                    <div class="real-world-example">
+                                        <strong>🌍 Gerçek Dünya:</strong> Boeing 747'de kanat üstündeki hız artışı basınç düşürür ve kaldırma oluşturur
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="formula-card">
+                                <h4>Sürükleme Kuvveti</h4>
+                                <div class="formula">
+                                    <strong>F<sub>D</sub> = ½ × C<sub>D</sub> × ρ × v² × A</strong>
+                                </div>
+                                <ul class="formula-params">
+                                    <li><strong>F<sub>D</sub>:</strong> Sürükleme kuvveti (N)</li>
+                                    <li><strong>C<sub>D</sub>:</strong> Sürükleme katsayısı</li>
+                                    <li><strong>ρ:</strong> Hava yoğunluğu (kg/m³)</li>
+                                    <li><strong>v:</strong> Hız (m/s)</li>
+                                    <li><strong>A:</strong> Referans alanı (m²)</li>
+                                </ul>
+                                <div class="formula-usage">
+                                    <h5>🎯 Kullanım Alanları:</h5>
+                                    <ul class="usage-list">
+                                        <li><strong>Otomobil Tasarımı:</strong> Yakıt tüketimi optimizasyonu</li>
+                                        <li><strong>Uçak Performansı:</strong> Motor gücü gereksinimleri</li>
+                                        <li><strong>Bisiklet Yarışı:</strong> Aero pozisyon analizi</li>
+                                        <li><strong>Gök Taşı İncelemesi:</strong> Atmosfere giriş hızı</li>
+                                        <li><strong>Paraşüt Tasarımı:</strong> İniş hızı hesabı</li>
+                                    </ul>
+                                    <div class="real-world-example">
+                                        <strong>🌍 Gerçek Dünya:</strong> Tesla Model S'nin Cd=0.208 değeri sayesinde 400+ km menzil sağlar
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="formula-card">
+                                <h4>Kaldırma Kuvveti</h4>
+                                <div class="formula">
+                                    <strong>F<sub>L</sub> = ½ × C<sub>L</sub> × ρ × v² × A</strong>
+                                </div>
+                                <ul class="formula-params">
+                                    <li><strong>F<sub>L</sub>:</strong> Kaldırma kuvveti (N)</li>
+                                    <li><strong>C<sub>L</sub>:</strong> Kaldırma katsayısı</li>
+                                    <li><strong>α:</strong> Hücum açısı (derece)</li>
+                                    <li><strong>Stall açısı:</strong> ~15-20° (kanat tipine göre)</li>
+                                </ul>
+                                <div class="formula-usage">
+                                    <h5>🎯 Kullanım Alanları:</h5>
+                                    <ul class="usage-list">
+                                        <li><strong>Uçak Kalkış:</strong> Minimum hız hesaplaması</li>
+                                        <li><strong>Kanat Profil Tasarımı:</strong> NACA profil optimizasyonu</li>
+                                        <li><strong>Yelken Teknesi:</strong> Rüzgar giriş açısı ayarı</li>
+                                        <li><strong>Rüzgar Türbini:</strong> Blağın hücum açısı</li>
+                                    </ul>
+                                    <div class="real-world-example">
+                                        <strong>🌍 Gerçek Dünya:</strong> Airbus A380'in 560 ton ağırlığını 300 km/h'de kaldıran kanat sistemi
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="formula-card">
+                                <h4>Reynolds Sayısı</h4>
+                                <div class="formula">
+                                    <strong>Re = ρvL/μ = vL/ν</strong>
+                                </div>
+                                <ul class="formula-params">
+                                    <li><strong>Re:</strong> Reynolds sayısı (boyutsuz)</li>
+                                    <li><strong>L:</strong> Karakteristik uzunluk (m)</li>
+                                    <li><strong>μ:</strong> Dinamik viskozite (Pa·s)</li>
+                                    <li><strong>ν:</strong> Kinematik viskozite (m²/s)</li>
+                                    <li><strong>Kritik Re:</strong> ~2300 (borularda)</li>
+                                </ul>
+                                <div class="formula-usage">
+                                    <h5>🎯 Kullanım Alanları:</h5>
+                                    <ul class="usage-list">
+                                        <li><strong>Akış Türü Belirleme:</strong> Laminar vs Türbülan</li>
+                                        <li><strong>Model Test Skalması:</strong> Rüzgar tüneli ölçekleme</li>
+                                        <li><strong>Boru Sistemi Tasarımı:</strong> Basınç kaybı hesabı</li>
+                                        <li><strong>Gemi Hidrodinamiği:</strong> Su altı akış analizi</li>
+                                        <li><strong>Mikroakışkanlar:</strong> Lab-on-chip cihazlar</li>
+                                    </ul>
+                                    <div class="real-world-example">
+                                        <strong>🌍 Gerçek Dünya:</strong> Golf topundaki çukurlar Re~10⁵'te türbülan akış oluşturarak menzil artırır
+                                    </div>
+                                </div>
+                            </div>
+                                    <li><strong>μ:</strong> Dinamik viskozite (Pa·s)</li>
+                                    <li><strong>ν:</strong> Kinematik viskozite (m²/s)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="formula-card">
+                                <h4>Mach Sayısı</h4>
+                                <div class="formula">
+                                    <strong>M = v/a</strong>
+                                </div>
+                                <ul class="formula-params">
+                                    <li><strong>M:</strong> Mach sayısı (boyutsuz)</li>
+                                    <li><strong>v:</strong> Cisim hızı (m/s)</li>
+                                    <li><strong>a:</strong> Ses hızı (~343 m/s, 20°C'de)</li>
+                                    <li><strong>M < 1:</strong> Subsonic (sesaltı)</li>
+                                    <li><strong>M > 1:</strong> Supersonic (sesüstü)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="formula-card">
+                                <h4>Güç Gereksinimi</h4>
+                                <div class="formula">
+                                    <strong>P = F<sub>D</sub> × v</strong>
+                                </div>
+                                <ul class="formula-params">
+                                    <li><strong>P:</strong> Güç gereksinimi (Watt)</li>
+                                    <li><strong>F<sub>D</sub>:</strong> Sürükleme kuvveti (N)</li>
+                                    <li><strong>v:</strong> Hız (m/s)</li>
+                                    <li><strong>Not:</strong> Hızın küpü ile orantılı artış</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="aerodynamic-principles">
+                        <h3>🌬️ Temel Aerodinamik Prensipler</h3>
+                        <div class="principles-grid">
+                            <div class="principle-card">
+                                <div class="principle-icon">
+                                    <i class="fas fa-arrow-up"></i>
+                                </div>
+                                <h4>Kaldırma Kuvveti (Lift)</h4>
+                                <p>Uçakları havada tutan temel kuvvet. Kanat profili ve hava akışının farkı sayesinde oluşur.</p>
+                            </div>
+                            <div class="principle-card">
+                                <div class="principle-icon">
+                                    <i class="fas fa-arrow-left"></i>
+                                </div>
+                                <h4>Sürükleme Kuvveti (Drag)</h4>
+                                <p>Hareket yönünün tersine etki eden direndir. Aerodinamik tasarım ile minimize edilir.</p>
+                            </div>
+                            <div class="principle-card">
+                                <div class="principle-icon">
+                                    <i class="fas fa-weight-hanging"></i>
+                                </div>
+                                <h4>Ağırlık (Weight)</h4>
+                                <p>Yerçekiminin etkisiyle aşağı yönünde etki eden kuvvet. Kaldırma kuvveti ile dengelenmelidir.</p>
+                            </div>
+                            <div class="principle-card">
+                                <div class="principle-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <h4>İtme Kuvveti (Thrust)</h4>
+                                <p>Aracı ileriye iten kuvvet. Motor, pervane veya jet motorları ile sağlanır.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="applications-section">
+                        <h3>🚀 Aerodinamiğin Uygulama Alanları</h3>
+                        <div class="applications-grid">
+                            <div class="application-card">
+                                <i class="fas fa-plane"></i>
+                                <h4>Havacılık & Uzay</h4>
+                                <ul>
+                                    <li><strong>Ticari Havacılık:</strong> Boeing 787, Airbus A350</li>
+                                    <li><strong>Savaş Uçakları:</strong> F-35, Eurofighter Typhoon</li>
+                                    <li><strong>Helikopterler:</strong> Rotor aerodinamiği</li>
+                                    <li><strong>Uzay Araçları:</strong> SpaceX Falcon, NASA SLS</li>
+                                    <li><strong>Süpersonik Uçaklar:</strong> Concorde, X-59</li>
+                                    <li><strong>Kanat Profilleri:</strong> NACA, Supercritical</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="application-card">
+                                <i class="fas fa-ship"></i>
+                                <h4>Denizcilik & Su Sporları</h4>
+                                <ul>
+                                    <li><strong>Yelkenli Tekneler:</strong> America's Cup teknolojisi</li>
+                                    <li><strong>Sürat Tekneleri:</strong> Hull ve foil tasarımı</li>
+                                    <li><strong>Kargo Gemileri:</strong> Bulbous bow yakıt tasarrufu</li>
+                                    <li><strong>Rüzgar Sörfü:</strong> Yelken optimizasyonu</li>
+                                    <li><strong>Uçarkayık (Hydrofoil):</strong> Lift teknolojisi</li>
+                                    <li><strong>Denizaltı:</strong> Su altı aerodinamiği</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="application-card">
+                                <i class="fas fa-car"></i>
+                                <h4>Otomotiv & Yarış</h4>
+                                <ul>
+                                    <li><strong>Formula 1:</strong> Ground effect, DRS sistemi</li>
+                                    <li><strong>NASCAR:</strong> Draft aerodinamiği, pack racing</li>
+                                    <li><strong>Le Mans:</strong> LMP1, Hypercar kategorileri</li>
+                                    <li><strong>Elektrikli Araçlar:</strong> Tesla Model S (Cd: 0.208)</li>
+                                    <li><strong>Süper Otomobiller:</strong> McLaren P1, Bugatti Chiron</li>
+                                    <li><strong>Ticari Araçlar:</strong> Kamyon ve otobüs aerodinamiği</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="application-card">
+                                <i class="fas fa-wind"></i>
+                                <h4>Enerji & Çevre</h4>
+                                <ul>
+                                    <li><strong>Rüzgar Türbinleri:</strong> HAWT, VAWT tasarımları</li>
+                                    <li><strong>Offshore Rüzgar:</strong> Deniz rüzgar çiftlikleri</li>
+                                    <li><strong>Şehir Planlama:</strong> Bina rüzgar koridorları</li>
+                                    <li><strong>Hava Kirliliği:</strong> Emisyon dağılım modelleme</li>
+                                    <li><strong>İklim Araştırması:</strong> Atmosferik sirkülasyon</li>
+                                    <li><strong>Güneş Çiftlikleri:</strong> Panel rüzgar yükü</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="application-card">
+                                <i class="fas fa-running"></i>
+                                <h4>Spor & Rekreasyon</h4>
+                                <ul>
+                                    <li><strong>Olimpik Sporlar:</strong> Kayak atlama, bobsled</li>
+                                    <li><strong>Bisiklet:</strong> Time trial, aero pozisyonu</li>
+                                    <li><strong>MotoGP:</strong> Winglet teknolojisi</li>
+                                    <li><strong>Golf:</strong> Top aeridinamiği, dimple deseni</li>
+                                    <li><strong>Futbol:</strong> Magnus etkisi, curved shots</li>
+                                    <li><strong>Hava Sporları:</strong> Paraşüt, yamaç paraşütü</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="application-card">
+                                <i class="fas fa-industry"></i>
+                                <h4>Endüstri & Teknoloji</h4>
+                                <ul>
+                                    <li><strong>Yüksek Hızlı Trenler:</strong> Shinkansen, TGV</li>
+                                    <li><strong>Hyperloop:</strong> Vakum tüpü ulaşım sistemi</li>
+                                    <li><strong>Fan Teknolojisi:</strong> Axial, centrifugal fanlar</li>
+                                    <li><strong>HVAC Sistemleri:</strong> Bina havalandırma</li>
+                                    <li><strong>Köprü Mühendisliği:</strong> Rüzgar titreşimleri</li>
+                                    <li><strong>Drone Teknolojisi:</strong> Multirotor aerodinamiği</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="key-concepts">
+                        <h3>📊 Gelişmiş Aerodinamik Kavramlar</h3>
+                        <div class="concepts-grid">
+                            <div class="concept-card">
+                                <h4>🌪️ Akış Türleri</h4>
+                                <ul>
+                                    <li><strong>Laminar Akış:</strong> Düzenli, katmanlı hava akışı (Re < 2300)</li>
+                                    <li><strong>Türbülan Akış:</strong> Karmaşık, dönüşlü hava akışı (Re > 4000)</li>
+                                    <li><strong>Geçiş Bölgesi:</strong> Laminar'dan türbülana geçiş</li>
+                                    <li><strong>Sınır Tabaka:</strong> Duvar yakınındaki yavaş akış bölgesi</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="concept-card">
+                                <h4>🚀 Compressible Flow</h4>
+                                <ul>
+                                    <li><strong>Subsonic (M < 1):</strong> Sesaltı akış</li>
+                                    <li><strong>Transonic (M ≈ 1):</strong> Ses bariyeri geçişi</li>
+                                    <li><strong>Supersonic (M > 1):</strong> Sesüstü akış</li>
+                                    <li><strong>Hypersonic (M > 5):</strong> Aşırı yüksek hız</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="concept-card">
+                                <h4>📐 Kanat Teorisi</h4>
+                                <ul>
+                                    <li><strong>Camber:</strong> Kanat profili eğriliği</li>
+                                    <li><strong>Chord:</strong> Kanat kirişi uzunluğu</li>
+                                    <li><strong>Aspect Ratio:</strong> Kanat açıklığı/kiriş oranı</li>
+                                    <li><strong>Sweep Angle:</strong> Kanat süpürme açısı</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="concept-card">
+                                <h4>🔄 Vortex & Turbulence</h4>
+                                <ul>
+                                    <li><strong>Tip Vortices:</strong> Kanat ucu girdapları</li>
+                                    <li><strong>Wake Turbulence:</strong> Arkadan gelen türbülans</li>
+                                    <li><strong>Karman Vortex Street:</strong> Silindir arkası girdaplar</li>
+                                    <li><strong>Ground Effect:</strong> Yere yakınlık etkisi</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="concept-card">
+                                <h4>🎯 Aerodinamik Katsayılar</h4>
+                                <ul>
+                                    <li><strong>Cd (Drag Coefficient):</strong> 0.1-2.0 arasında değişir</li>
+                                    <li><strong>Cl (Lift Coefficient):</strong> Kanat tipine göre -1.5 ile +2.5</li>
+                                    <li><strong>L/D Ratio:</strong> Aerodinamik verimlilik (5-50 arası)</li>
+                                    <li><strong>Cm (Moment Coefficient):</strong> Torka sebep olan kuvvet</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="concept-card">
+                                <h4>💨 Özel Efektler</h4>
+                                <ul>
+                                    <li><strong>Coandă Etkisi:</strong> Akışkanın yüzeye yapışması</li>
+                                    <li><strong>Magnus Etkisi:</strong> Dönen cismin yana sapması</li>
+                                    <li><strong>Venturi Etkisi:</strong> Daralan kesitte hız artışı</li>
+                                    <li><strong>Stall:</strong> Kritik açıda kaldırma kaybı</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="measurement-section">
+                            <h4>🔬 Aerodinamik Ölçüm Yöntemleri</h4>
+                            <div class="measurement-grid">
+                                <div class="measurement-item">
+                                    <h5>Rüzgar Tüneli</h5>
+                                    <p>Kontrollü ortamda fiziksel test. Hız: 10-300+ m/s</p>
+                                </div>
+                                <div class="measurement-item">
+                                    <h5>CFD Analizi</h5>
+                                    <p>Bilgisayar simülasyonu. ANSYS Fluent, OpenFOAM</p>
+                                </div>
+                                <div class="measurement-item">
+                                    <h5>PIV (Particle Image Velocimetry)</h5>
+                                    <p>Lazer ile akış görselleştirme teknolojisi</p>
+                                </div>
+                                <div class="measurement-item">
+                                    <h5>Flight Test</h5>
+                                    <p>Gerçek uçuş koşullarında veri toplama</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-section">
+                        <p class="cta-text">📡 <strong>Hazır mısınız?</strong> Aşağıdaki videolar ve görseller ile aerodinamik dünyasını daha derinlemesine keşfedelim!</p>
+                        <button class="cta-button secondary" onclick="scrollToSection('gallery')">
+                            <i class="fas fa-images"></i> Görselleri İncele
+                        </button>
+                        <button class="cta-button" onclick="scrollToSection('media')">
+                            <i class="fas fa-play"></i> Videoları İzle
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <h2 class="section-title">🛩️ Aerodinamik Galeri</h2>
+                <div class="gallery-tabs">
+                    <button class="tab-btn active" data-tab="aircraft">Uçaklar</button>
+                    <button class="tab-btn" data-tab="cars">Arabalar</button>
+                    <button class="tab-btn" data-tab="flow">Hava Akışı</button>
+                    <button class="tab-btn" data-tab="simulation">Simülasyonlar</button>
+                </div>
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Aerodinamik görüntüler dinamik olarak yüklenecek -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Media Section -->
+        <section id="media" class="media-section">
+            <div class="container">
+                <h2 class="section-title">🎥 Aerodinamik Videolar</h2>
+                
+                <!-- Aerodynamic Videos -->
+                <div class="media-item">
+                    <h3>✈️ Uçak Aerodinamiği</h3>
+                    <div class="video-player">
+                        <video controls poster="./assets/images/aircraft-aerodynamics-poster.jpg">
+                            <source src="./assets/videos/aircraft/Image to video 丨 Turn the aerodynamics of the airplane into a video. Make it so .mp4" type="video/mp4">
+                            <source src="./assets/videos/aircraft-aerodynamics.mp4" type="video/mp4">
+                            <source src="./assets/videos/airflow-simulation.mp4" type="video/mp4">
+                            Uçak aerodinamik videosu yüklenemiyor.
+                        </video>
+                        <p class="media-description">Uçak aerodinamik analizi - kanat üzerindeki hava akışı, kaldırma kuvveti ve aerodinamik performans görselleştirmesi</p>
+                    </div>
+                </div>
+                
+                <!-- Car Aerodynamics -->
+                <div class="media-item">
+                    <h3>🏎️ Araba Aerodinamiği</h3>
+                    <div class="video-player">
+                        <video controls poster="./assets/images/car-aerodynamics-poster.jpg">
+                            <source src="./assets/videos/cars/Image to video 丨 Show the aerodynamics of a Formula 1 car in a video. Let the mo.mp4" type="video/mp4">
+                            <source src="./assets/videos/car-aerodynamics.mp4" type="video/mp4">
+                            Araba aerodinamik videosu yüklenemiyor.
+                        </video>
+                        <p class="media-description">Formula 1 ve genel otomobil aerodinamik analizi - hava akış dinamikleri, downforce optimizasyonu ve performans</p>
+                    </div>
+                    
+                    <!-- Araç CFD Animasyonu -->
+                    <div class="cfd-animation" style="margin-top: 20px;">
+                        <h4>🌊 Araç CFD Analizi</h4>
+                        <div class="gif-container">
+                            <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rimaccfd-1543262505.gif?resize=768:*" 
+                                 alt="Rimac Araç CFD Analizi - Hava Akış Simülasyonu" 
+                                 loading="lazy"
+                                 style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
+                        </div>
+                        <p class="media-description">Rimac elektrikli süper otomobilinin CFD analizi - hava akış dinamikleri ve basınç dağılımı</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+        <!-- Feedback Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">💭 Geri Bildirim</h2>
+                <div class="feedback-intro">
+                    <p>Aerodinamik web sitemiz hakkındaki düşüncelerinizi bizimle paylaşın! Görüşleriniz bizim için çok değerli.</p>
+                </div>
+                <div class="contact-content">
+                    <form class="contact-form" id="feedback-form" name="feedback" method="POST" netlify>
+                        <div class="form-group">
+                            <label for="name">👤 İsminiz:</label>
+                            <input type="text" id="name" name="name" placeholder="Adınızı yazın..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="feedback">💬 Sayfa hakkındaki düşünceleriniz:</label>
+                            <textarea id="feedback" name="feedback" placeholder="Bu site hakkındaki düşüncelerinizi, önerilerinizi ve deneyimlerinizi paylaşın..." rows="6" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="rating">⭐ Sayfayı nasıl değerlendiriyorsunuz?</label>
+                            <select id="rating" name="rating" required>
+                                <option value="">Puan seçin...</option>
+                                <option value="5">⭐⭐⭐⭐⭐ Mükemmel</option>
+                                <option value="4">⭐⭐⭐⭐ Çok İyi</option>
+                                <option value="3">⭐⭐⭐ İyi</option>
+                                <option value="2">⭐⭐ Orta</option>
+                                <option value="1">⭐ Geliştirilebilir</option>
+                            </select>
+                        </div>
+                        <div class="button-group">
+                            <button type="submit" class="submit-button">
+                                <i class="fas fa-paper-plane"></i>
+                                Geri Bildirimi Gönder
+                            </button>
+                            <button type="button" class="mailto-button" onclick="openDirectEmail()">
+                                <i class="fas fa-envelope"></i>
+                                Doğrudan E-posta
+                            </button>
+                        </div>
+                        <p class="form-note">🔒 Geri bildiriminiz doğrudan e-posta adresimize gönderilecektir.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🛩️ AeroDinamik</h3>
+                    <p>Hava akışı ve aerodinamik biliminin kapsamlı kaynağı</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Keşfet</h4>
+                    <ul>
+                        <li><a href="#home">Ana Sayfa</a></li>
+                        <li><a href="#about">Aerodinamik Nedir?</a></li>
+                        <li><a href="#gallery">Aerodinamik Galeri</a></li>
+                        <li><a href="#media">Aero Videolar ve Sesler</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AeroDinamik. Hava akışı bilimine adanmış. Tüm hakları saklıdır.</p>
+                <div class="development-info">
+                    <p class="ai-development">
+                        🤖 Bu web sitesi yapay zeka araçları ile geliştirilmiştir ve şu anda prototip aşamasındadır.
+                        <br>
+                        <span class="beta-badge">BETA</span> Sürekli geliştirme ve iyileştirme süreci devam etmektedir.
+                    </p>
+                    <div class="ai-tools-info">
+                        <h4>🛠️ Kullanılan Yapay Zeka Araçları:</h4>
+                        <div class="tools-grid">
+                            <div class="tool-item">
+                                <div class="tool-icon">🧠</div>
+                                <div class="tool-details">
+                                    <strong>Claude Sonnet</strong>
+                                    <span>Web geliştirme, kodlama ve tüm eklentiler</span>
+                                </div>
+                            </div>
+                            <div class="tool-item">
+                                <div class="tool-icon">🎨</div>
+                                <div class="tool-details">
+                                    <strong>Canva AI</strong>
+                                    <span>Görseller ve resim içerikleri</span>
+                                </div>
+                            </div>
+                            <div class="tool-item">
+                                <div class="tool-icon">🎬</div>
+                                <div class="tool-details">
+                                    <strong>Pollo AI</strong>
+                                    <span>Video oluşturma ve animasyonlar</span>
+                                </div>
+                            </div>
+                            <div class="tool-item">
+                                <div class="tool-icon">🎤</div>
+                                <div class="tool-details">
+                                    <strong>Play.ht</strong>
+                                    <span>Ses dosyaları ve seslendirme</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Email Servisleri -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- JavaScript dosyaları -->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/gallery.js"></script>
+    <script src="./assets/js/media-handler.js"></script>
+    <script src="./assets/js/voice-assistant.js"></script>
+</body>
+</html>

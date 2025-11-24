@@ -1,0 +1,31 @@
+AERODINAMIK MULTIMODAL WEB SITESI PROJE RAPORU
+==============================================
+
+Proje Adı: Interactive Aerodynamics Educational Website
+Geliştirici: Siraç Özkaya
+Tarih: Kasım 2025
+Kurs: Yapay Zeka Destekli Web Geliştirme
+
+EXECUTIVE SUMMARY
+=================
+
+Bu proje, aerodinamik bilimi konusunda kapsamlı eğitim veren, multimodal özelliklere sahip 
+interaktif bir web sitesi geliştirme sürecini içermektedir. Yapay zeka destekli geliştirme 
+yaklaşımı kullanılarak modern web teknolojileri ile responsive, erişilebilir ve etkileşimli 
+bir platform oluşturulmuştur.
+
+1. PROJE AMACI VE HEDEFLERİ
+===========================
+
+1.1 Ana Amaç:
+- Aerodinamik bilimi hakkında etkileşimli eğitim platformu oluşturma
+- Multimodal içerik (metin, ses, görsel, video) entegrasyonu
+- Yapay zeka destekli geliştirme sürecinin deneyimlenmesi
+- Modern web teknolojilerinin uygulamalı öğrenilmesi
+
+1.2 Hedef Kitle:
+- Havacılık mühendisliği öğrencileri
+- Aerodinamik araştırmacıları
+- CFD (Computational Fluid Dynamics) uzmanları
+- Genel eğitim amaçlı kullanıcılar
+

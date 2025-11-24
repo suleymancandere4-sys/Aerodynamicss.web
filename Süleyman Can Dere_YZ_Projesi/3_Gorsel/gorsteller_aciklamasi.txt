@@ -1,0 +1,63 @@
+GÖRSEL DOSYALARI AÇIKLAMASI
+============================
+
+Bu klasör, Aerodinamik Multimodal Web Sitesi projesinin ekran görüntülerini ve görsel materyallerini içermektedir.
+
+GÖRSEL LİSTESİ:
+==============
+
+gorsel_1.png - ANA SAYFA EKRAN GÖRÜNTÜSÜ
+-------------------------------------------
+• Website'in landing page'i
+• Header navigasyon menüsü
+• Hero section ve giriş animasyonları
+• "Aerodinamik Bilimi" başlık alanı
+• Responsive tasarım desktop görünümü
+• Claude Sonnet branding badge
+• Modern UI/UX tasarım örnekleri
+
+gorsel_2.png - FORMÜLLER VE EĞİTİM BÖLÜMÜ
+------------------------------------------
+• Bernoulli Prensibi formül kartı
+• Kaldırma Kuvveti hesaplama alanı
+• Sürükleme Kuvveti ve Re sayısı formülleri
+• İnteraktif formül parametreleri
+• Gerçek dünya uygulama örnekleri
+• Matematiksel notasyon görünümü
+• Educational content layout
+
+gorsel_3.png - MEDYA GALERİSİ VE İNTERAKTİF ÖZELLIKLER
+------------------------------------------------------
+• CFD görüntü galerisi (ResearchGate kaynaklı)
+• Video oynatıcı interface
+• Voice Assistant kontrol paneli
+• Geri bildirim formu ve rating sistemi
+• E-posta entegrasyon düğmeleri
+• Timeline bilim insanları profilleri
+• Multimodal özellikler showcase
+
+promptlar.txt - PROMPT GEÇMİŞİ
+-------------------------------
+• Geliştirme sürecinde kullanılan AI prompt'ları
+• YZ etkileşim örnekleri
+• Kod geliştirme yaklaşımları
+• Hata giderme süreçleri
+
+TEKNIK DETAYLAR:
+===============
+• Çözünürlük: Full HD (1920x1080)
+• Format: PNG (yüksek kalite)
+• Tarayıcı: Chrome/Firefox/Edge
+• Responsive test: Desktop ve mobil görünüm
+• Tarih: 18 Kasım 2025
+
+KULLANIM AMACI:
+==============
+• Akademik proje teslimi
+• Hoca'ya görsel kanıt sunumu
+• Portfolio dokümantasyonu
+• Geliştirme süreci takibi
+• Multimodal özelliklerin gösterimi
+
+NOT: Tüm ekran görüntüleri, projenin farklı özelliklerini 
+ve gelişim aşamalarını göstermek üzere dikkatli bir şekilde seçilmiştir.

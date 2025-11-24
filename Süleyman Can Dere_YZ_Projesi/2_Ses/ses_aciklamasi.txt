@@ -1,0 +1,45 @@
+SES DOSYASI AÇIKLAMASI
+======================
+
+Dosya Adı: ses_dosyasi.mp3
+Özellik: Website'in Voice Assistant özelliğinden alınmış örnek ses kaydı
+
+İÇERİK AÇIKLAMASI:
+=================
+Bu ses dosyası, Aerodinamik Web Sitesi'nin "Sesli Sayfa Okuyucu" (Voice Assistant) özelliğinin 
+çalışma örneğini içermektedir.
+
+SES İÇERİĞİ:
+============
+• Web Speech API kullanılarak oluşturulmuş text-to-speech örneği
+• Aerodinamik temel kavramları hakkında sesli açıklama
+• Bernoulli prensibi ve formüllerinin sesli anlatımı
+• Website navigasyon rehberi
+• Türkçe doğal ses sentezi örneği
+
+TEKNİK ÖZELLİKLER:
+==================
+• Format: MP3
+• Kalite: 128 kbps
+• Süre: ~2-3 dakika
+• Dil: Türkçe
+• Teknoloji: Web Speech API
+• Tarayıcı desteği: Modern browsers
+
+KULLANIM AMACI:
+==============
+• Görme engelli kullanıcılar için erişilebilirlik
+• Çoklu öğrenme stiline destek
+• Multimodal eğitim deneyimi
+• Hands-free içerik tüketimi
+• Akademik proje multimodal özellik kanıtı
+
+OLUŞTURMA YÖNTEMİ:
+==================
+1. Website'in voice assistant butonuna tıklanması
+2. Text-to-Speech API'nin aktifleştirilmesi
+3. Sayfa içeriğinin sesli olarak okunması
+4. Ses kaydının MP3 formatında export edilmesi
+
+NOT: Bu dosya, projenin multimodal özelliklerini göstermek için 
+akademik teslim amaçlı oluşturulmuştur.

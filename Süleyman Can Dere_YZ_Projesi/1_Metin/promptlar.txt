@@ -1,0 +1,53 @@
+KULLANILAN PROMPT'LAR VE YZ ETKİLEŞİMLERİ
+========================================
+
+1. BAŞLANGIÇ PROMPT'LARI:
+========================
+• "Multimodal bir web site kuracağım"
+• "Websiteyi Aerodinamik konulu yapacağım"
+• "CFD görüntülerini ekleyelim profesyonel olanlardan"
+
+2. ÖZELLIK GELİŞTİRME PROMPT'LARI:
+=================================
+• "Formüllerin açıklamalarını genişletelim, gerçek dünya uygulamaları ekleyelim"
+• "Geri bildirim sistemi ekleyelim, e-posta göndersin"
+• "Voice assistant ekleyelim, sayfa okusun"
+• "Claude Sonnet markasını ekleyelim"
+
+3. HATA GİDERME PROMPT'LARI:
+===========================
+• "bildirimler benim mail'ime gelmiyor"
+• "Formula 1'de Aerodinamik diye bir konu var onu kaldırmak istiyorum"
+• "Sayfada bulunan Formula 1' de aerodinamik menüsünü kaldıralım"
+
+4. YZ YARDIM ALANLARI:
+=====================
+• Kod optimizasyonu ve hata giderme
+• CSS stillendirme ve responsive tasarım
+• JavaScript fonksiyon geliştirme
+• E-posta sistemi entegrasyonu
+• İçerik düzenleme ve yapılandırma
+
+5. KULLANILAN YZ ARAÇları:
+=========================
+• GitHub Copilot (Claude Sonnet 4)
+• Kod tamamlama ve öneri sistemi
+• Hata ayıklama ve debugging
+• Otomatik kod refaktörleme
+• Dokümantasyon oluşturma
+
+6. YZ DESTEKLİ GELİŞTİRME SÜRECİ:
+================================
+• Iteratif geliştirme yaklaşımı
+• Real-time kod analizi
+• Otomatik test ve validasyon
+• Performans optimizasyonu
+• Cross-browser uyumluluk kontrolü
+
+7. ÖĞRENİLEN DERSLER:
+===================
+• YZ ile hızlı prototipleme
+• Kod kalitesi artışı
+• Hata oranında azalma
+• Geliştirme süresinde verimlilik
+• Modern web teknolojilerinde uzmanlaşma

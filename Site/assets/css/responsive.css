@@ -1,0 +1,640 @@
+/* ========================================
+   Responsive Tasarım - responsive.css
+   Aerodinamik Tema için Mobil Uyumluluk
+   ======================================== */
+
+/* ========================================
+   TABLET LANDSCAPE (1024px ve altı)
+   ======================================== */
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 960px;
+        padding: 0 var(--spacing-lg);
+    }
+    
+    .hero-section .container {
+        gap: var(--spacing-2xl);
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ========================================
+   TABLET PORTRAIT (768px ve altı)
+   ======================================== */
+@media screen and (max-width: 768px) {
+    /* Navigation */
+    .navbar-menu {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(30, 58, 138, 0.98);
+        backdrop-filter: blur(10px);
+        padding: var(--spacing-xl);
+        transform: translateY(-100%);
+        transition: var(--transition-medium);
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .navbar-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .navbar-nav {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .navbar-toggle {
+        display: flex;
+    }
+    
+    .navbar-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .navbar-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .navbar-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        padding: var(--spacing-3xl) 0;
+        text-align: center;
+    }
+    
+    .hero-section .container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-3xl);
+        line-height: 1.2;
+    }
+    
+    .hero-description {
+        font-size: var(--font-size-base);
+    }
+    
+    .hero-visual-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        min-height: 400px;
+    }
+    
+    .aero-main-image {
+        min-height: 350px;
+    }
+    
+    .hero-video-small {
+        max-height: 200px;
+    }
+    
+    .flow-animation {
+        display: none; /* Mobilde hava akışı animasyonunu gizle */
+    }
+    
+    /* Gallery */
+    .gallery-tabs {
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+    
+    .tab-btn {
+        font-size: var(--font-size-sm);
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .gallery-item img {
+        height: 200px;
+    }
+    
+    /* Media Section */
+    .media-item {
+        padding: var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .media-item h3 {
+        font-size: var(--font-size-lg);
+    }
+    
+    /* About Section */
+    .principles-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .applications-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .principle-card,
+    .application-card {
+        padding: var(--spacing-lg);
+    }
+    
+    /* Contact Form */
+    .contact-form {
+        padding: var(--spacing-xl);
+        margin: 0 var(--spacing-md);
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+        text-align: left;
+    }
+}
+
+/* ========================================
+   MOBILE LANDSCAPE (640px ve altı)
+   ======================================== */
+@media screen and (max-width: 640px) {
+    /* Typography Adjustments */
+    :root {
+        --font-size-5xl: 2.5rem;
+        --font-size-4xl: 2rem;
+        --font-size-3xl: 1.75rem;
+        --font-size-2xl: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: var(--font-size-2xl);
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    /* Navigation */
+    .navbar {
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .navbar-brand h1 {
+        font-size: var(--font-size-xl);
+    }
+    
+    /* Hero */
+    .hero-title {
+        font-size: var(--font-size-2xl);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .hero-description {
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .hero-visual-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+        min-height: 350px;
+    }
+    
+    .aero-main-image {
+        min-height: 300px;
+    }
+    
+    .hero-video-small {
+        max-height: 150px;
+    }
+    
+    .image-overlay {
+        position: static;
+        transform: none;
+        background: rgba(0, 0, 0, 0.7);
+        padding: var(--spacing-md);
+    }
+    
+    .cta-button {
+        padding: var(--spacing-md) var(--spacing-xl);
+        font-size: var(--font-size-base);
+    }
+    
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .gallery-item img {
+        height: 250px;
+    }
+    
+    /* Upload Area */
+    .file-upload {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .upload-label {
+        font-size: var(--font-size-base);
+    }
+    
+    .upload-label i {
+        font-size: var(--font-size-3xl);
+    }
+}
+
+/* ========================================
+   MOBILE PORTRAIT (480px ve altı)
+   ======================================== */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    /* Spacing Adjustments */
+    :root {
+        --spacing-3xl: 3rem;
+        --spacing-2xl: 2rem;
+        --spacing-xl: 1.5rem;
+    }
+    
+    /* Header */
+    .navbar-brand h1 {
+        font-size: var(--font-size-lg);
+    }
+    
+    .navbar-brand i {
+        font-size: var(--font-size-lg);
+    }
+    
+    /* Hero */
+    .hero-section {
+        min-height: 80vh;
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-xl);
+        line-height: 1.3;
+    }
+    
+    .hero-description {
+        font-size: var(--font-size-sm);
+        line-height: 1.5;
+    }
+    
+    /* Sections */
+    section {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .section-title {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    /* Gallery Tabs */
+    .gallery-tabs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    /* Media Items */
+    .media-item {
+        padding: var(--spacing-md);
+        border-radius: var(--radius-md);
+    }
+    
+    .media-item h3 {
+        font-size: var(--font-size-base);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    /* About Section - Mobile */
+    .lead-text {
+        font-size: var(--font-size-lg);
+    }
+    
+    .principles-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .principle-card,
+    .application-card {
+        padding: var(--spacing-md);
+    }
+    
+    .principle-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .principle-icon i {
+        font-size: var(--font-size-lg);
+    }
+    
+    .cta-section .cta-button {
+        display: block;
+        width: 100%;
+        margin: var(--spacing-sm) 0;
+    }
+    
+    /* Timeline - Mobile */
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        text-align: left;
+        padding-left: var(--spacing-3xl);
+    }
+    
+    .timeline-year {
+        left: -25px !important;
+        right: auto !important;
+    }
+    
+    /* Formulas - Mobile */
+    .formulas-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .formula-card {
+        padding: var(--spacing-md);
+    }
+    
+    .formula {
+        font-size: var(--font-size-base);
+        padding: var(--spacing-sm);
+    }
+    
+    /* F1 Section - Mobile */
+    .f1-components {
+        grid-template-columns: 1fr;
+    }
+    
+    .f1-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    /* Concepts - Mobile */
+    .concepts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .measurement-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contact Form */
+    .contact-form {
+        padding: var(--spacing-lg);
+        margin: 0 var(--spacing-sm);
+        border-radius: var(--radius-lg);
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: var(--spacing-sm);
+        font-size: var(--font-size-sm);
+    }
+    
+    .submit-button {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--font-size-base);
+    }
+    
+    /* Footer */
+    .footer {
+        padding: var(--spacing-2xl) 0 var(--spacing-md);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .social-links a {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* ========================================
+   VERY SMALL SCREENS (360px ve altı)
+   ======================================== */
+@media screen and (max-width: 360px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    /* Extra small typography */
+    .hero-title {
+        font-size: var(--font-size-lg);
+    }
+    
+    .section-title {
+        font-size: var(--font-size-lg);
+    }
+    
+    /* Compact spacing */
+    section {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .gallery-item img {
+        height: 200px;
+    }
+    
+    .media-item {
+        padding: var(--spacing-sm);
+    }
+    
+    .contact-form {
+        margin: 0;
+        border-radius: var(--radius-md);
+    }
+}
+
+/* ========================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ======================================== */
+@media (hover: none) and (pointer: coarse) {
+    /* Daha büyük dokunma alanları */
+    .nav-link {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+    
+    .tab-btn {
+        padding: var(--spacing-md) var(--spacing-lg);
+        min-height: 44px; /* iOS önerisi */
+    }
+    
+    .cta-button {
+        min-height: 48px;
+        padding: var(--spacing-md) var(--spacing-2xl);
+    }
+    
+    /* Hover efektlerini devre dışı bırak */
+    .gallery-item:hover {
+        transform: none;
+    }
+    
+    .feature-card:hover {
+        transform: none;
+    }
+    
+    .feature-card:hover::before {
+        left: -100%;
+    }
+    
+    /* Dokunma için gallery overlay'i her zaman göster */
+    .gallery-overlay {
+        transform: translateY(0);
+        background: rgba(0, 0, 0, 0.6);
+    }
+}
+
+/* ========================================
+   HIGH DPI SCREENS
+   ======================================== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Retina ekranlar için ince çizgiler */
+    .nav-link::after {
+        height: 1px;
+    }
+    
+    .footer-bottom {
+        border-top-width: 0.5px;
+    }
+}
+
+/* ========================================
+   LANDSCAPE ORIENTATION (Mobile)
+   ======================================== */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        min-height: 100vh;
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-2xl);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .hero-description {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    section {
+        padding: var(--spacing-xl) 0;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+@media print {
+    .header,
+    .navbar-toggle,
+    .flow-animation,
+    .cta-button,
+    .contact-form,
+    .footer {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+        color: black;
+    }
+    
+    .hero-section,
+    section {
+        padding: 20pt 0;
+        break-inside: avoid;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10pt;
+    }
+    
+    .gallery-item img {
+        height: auto;
+    }
+}
+
+/* ========================================
+   REDUCED MOTION
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .flow-animation,
+    .airflow-line {
+        animation: none;
+    }
+    
+    .navbar-brand i {
+        animation: none;
+    }
+}
+
+/* ========================================
+   HIGH CONTRAST MODE
+   ======================================== */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #000080;
+        --secondary-color: #0066cc;
+        --accent-color: #0099cc;
+        --text-primary: #000000;
+        --text-secondary: #333333;
+    }
+    
+    .nav-link,
+    .tab-btn,
+    .cta-button {
+        border-width: 2px;
+    }
+}
